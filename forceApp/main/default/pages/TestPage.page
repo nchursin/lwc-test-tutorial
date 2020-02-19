@@ -1,0 +1,23 @@
+<apex:page sidebar="false" >
+    <apex:includeLightning/>
+    <div id="loading-spinner-container" class="spinner__container">
+        <div role="status" class="spinner spinner_small">
+            <div class="spinner__dot-a"></div>
+            <div class="spinner__dot-b"></div>
+        </div>
+    </div>
+    <div id="applicationConfigurationContainer" />
+    <script>
+        $Lightning.use("c:ltngDependencyApp",
+            function () {
+                $Lightning.createComponent("c:applicationConfigurationWrapper",
+                    null,
+                    "applicationConfigurationContainer",
+                    function (component) {
+                        const spinnerContainer = document.getElementById("loading-spinner-container");
+                        spinnerContainer.style.display = 'none';
+                    }
+                );
+            });
+    </script>
+</apex:page>

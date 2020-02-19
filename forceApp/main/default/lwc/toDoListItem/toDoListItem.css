@@ -1,0 +1,51 @@
+.todo-list__item {
+    background: #eee;
+    margin-bottom: 0.25rem;
+    padding: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.todo-list__item--completed {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.todo-list__item:hover {
+    box-shadow: 1px 1px 1px #ccc;
+    transform: scale(1.01);
+}
+
+.todo-list__item:hover .todo-list__item__icon-container .todo-list__item__icon {
+    opacity: 1;
+}
+
+.todo-list__item--title {
+    margin-left: 0.5rem;
+}
+
+.todo-list__item--completed:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.todo-list__item--completed .todo-list__item--title {
+    text-decoration: line-through;
+}
+
+.todo-list__item__icon-container {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+}
+
+.todo-list__item__icon {
+    opacity: 0;
+    height: 1rem;
+    width: 1rem;
+    color: #096a3f;
+    transition: all 0.2s linear;
+}

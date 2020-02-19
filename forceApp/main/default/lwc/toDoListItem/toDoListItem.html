@@ -1,0 +1,16 @@
+<template>
+    <div class={toDoListItemClass} onclick={onListItemClickHandler}>
+        <span class="todo-list__item--order">{order}</span>
+        <span class="todo-list__item--title">{title}</span>
+
+        <template if:false={completed}>
+            <div class="todo-list__item__icon-container">
+                <svg class="todo-list__item__icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor"
+                        d="M369.16 174.77a20 20 0 010 28.28L235 337.23a20 20 0 01-28.28 0l-63.87-63.87a20 20 0 1128.28-28.29l49.73 49.73 120.03-120.03a20 20 0 0128.28 0zM512 256c0 141.5-114.52 256-256 256C114.5 512 0 397.48 0 256 0 114.5 114.52 0 256 0c141.5 0 256 114.52 256 256zm-40 0c0-119.4-96.62-216-216-216-119.4 0-216 96.62-216 216 0 119.4 96.62 216 216 216 119.4 0 216-96.62 216-216zm0 0">
+                    </path>
+                </svg>
+            </div>
+        </template>
+    </div>
+</template>

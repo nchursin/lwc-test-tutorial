@@ -1,0 +1,5 @@
+<template>
+    <template for:each={items} for:item="item">
+        <c-to-do-list-item key={item.id} item={item} onselectitem={onItemSelectedHandler}></c-to-do-list-item>
+    </template>
+</template>
